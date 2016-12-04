@@ -17,7 +17,7 @@ Then, don't forget to add media to your PlexMedia Server Library.
 # How to use:
 
 ```
-git clone https://github.com/duduclx/rasppms.git
+git clone https://github.com/duduclx/myraspberry3.git
 cd rasppms
 ```
 First, intall Plexmedia Server:
