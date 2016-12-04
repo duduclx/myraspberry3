@@ -1,10 +1,15 @@
-# rasppms
-plexmedia server and plexconnect on raspberry, with raspbian jessie
+# My raspberry script
+scripts to run on raspberry, with raspbian jessie.
+
+just because i'm lazzy ...
 
 this project is about to have
 - [plexmedia server](https://www.plex.tv/)
 - [PlexConnect](https://github.com/iBaa/PlexConnect/)
-- make plexconnect running at boot as a service
+- [Shairplay-sync](https://github.com/mikebrady/shairport-sync)
+- Xscreensaver and glslideshow
+- tightvnc
+- remove libreoffice, minecraft and more
 
 # Important
 
@@ -20,7 +25,7 @@ Then, don't forget to add media to your PlexMedia Server Library.
 git clone https://github.com/duduclx/myraspberry3.git
 cd rasppms
 ```
-First, intall Plexmedia Server:
+if you want to intall Plexmedia Server:
 ```
 sudo chmod +x install_pms.sh
 sudo ./install_pms.sh
@@ -29,6 +34,21 @@ If you want to install PlexConnect:
 ```
 sudo chmod +x install_plexconnect.sh
 sudo ./plexconnect.sh
+```
+If you want to install xscreensaver:
+```
+sudo chmod +x install_xscreensaver.sh
+sudo ./install_xscreensaver.sh
+```
+If you want to install tightvnc:
+```
+sudo chmod +x vnc.sh
+sudo ./vnc.sh
+```
+If you want to remove some useless package:
+```
+sudo chmod +x remove_packages.sh
+sudo ./remove_packages.sh
 ```
 
 # tips
