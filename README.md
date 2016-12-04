@@ -45,6 +45,10 @@ If you want to install tightvnc:
 sudo chmod +x vnc.sh
 sudo ./vnc.sh
 ```
+and then, connect to your raspberry using this setting in your favorite vnc viewer:
+```
+raspberry-ip:5901
+```
 If you want to remove some useless package:
 ```
 sudo chmod +x remove_packages.sh
