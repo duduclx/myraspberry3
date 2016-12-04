@@ -5,8 +5,8 @@ wget https://github.com/iBaa/PlexConnect/archive/master.zip
 unzip -u master.zip
 
 #moving to /opt/PlexConnect
-sudo mv PlexConnect-master PlexConnect
-sudo cp -R PlexConnect /opt/
+sudo cp -R PlexConnect-master /opt/
+sudo mv /opt/PlexConnect-master /opt/PlexConnect
 
 #generating certificat
 openssl req -new -nodes -newkey rsa:2048 -out /opt/PlexConnect/assets/certificates/trailers.pem -keyout /opt/PlexConnect/assets/certificates/trailers.key -x509 -days 7300 -subj "/C=US/CN=trailers.apple.com"
