@@ -7,13 +7,13 @@
 sudo apt-get install tightvncserver
 
 #make it run at boot
-sudo cp vncboot /etc/init.d
-sudo chmod +x /etc/init.d/vncboot
-sudo update-rc.d vncboot defaults
-sudo update-rc.d vncboot enable
+sudo cp vncserver /etc/init.d/
+sudo chmod +x /etc/init.d/vncserver
+sudo update-rc.d vncserver defaults
+sudo update-rc.d vncserver enable
 
 #run vnc
-sudo service vncboot start
+sudo service vncserver start
 
 #### other method, not tested
 #enable service
