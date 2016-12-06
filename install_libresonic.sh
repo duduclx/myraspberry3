@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #install required package
-sudo apt-get install php5
 sudo apt-get install openjdk-8-jre
 sudo apt-get install tomcat8 openjdk-8-jdk maven
 
@@ -29,3 +28,4 @@ sudo systemctl restart tomcat8.service
 
 #wait and go to http://localhost:8080/libresonic/
 #may take about 15 minutes to run
+#but seems to don't work
