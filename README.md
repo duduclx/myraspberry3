@@ -1,10 +1,12 @@
 # My raspberry script
 scripts to run on raspberry, with raspbian jessie.
+just because i'm lazzy ...
 
 # To do
 update readme and have a master script
-
-just because i'm lazzy ...
+have a look to
+- owncloud
+- https://github.com/RetroPie/RetroPie-Setup
 
 this project is about to have
 - [plexmedia server](https://www.plex.tv/)
