@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #remove some unused apps
+sudo apt-get remove --purge realvnc-vnc-viewer
 sudo apt-get remove --purge libreoffice*
 sudo apt-get remove --purge claws-mail
 sudo apt-get remove --purge minecraft-pi python-minecraftpi
@@ -15,4 +16,8 @@ sudo rm -R Documents/Greenfoot\ Projects/
 sudo rm -R Documents/Scratch\ Projects/
 sudo rm -R repo
 sudo rm -R /usr/share/doc/*
+sudo apt-get autoremove
+
+#remove the Pixel-desktop ?
+#sudo apt-get remove --purge rpi-chromium-mods
 sudo apt-get autoremove
