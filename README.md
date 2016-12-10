@@ -1,6 +1,13 @@
 # My raspberry script
 scripts to run on raspberry, with raspbian jessie.
 
+# To do
+create script for specific minibian jessie image
+https://minibianpi.wordpress.com/
+https://netix.dl.sourceforge.net/project/minibian/2016-03-12-jessie-minibian.tar.gz
+
+update readme and have a master script
+
 just because i'm lazzy ...
 
 this project is about to have
