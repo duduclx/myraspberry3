@@ -14,4 +14,5 @@ sudo rm -R Documents/BlueJ\ Projects/
 sudo rm -R Documents/Greenfoot\ Projects/
 sudo rm -R Documents/Scratch\ Projects/
 sudo rm -R repo
+sudo rm -R /usr/share/doc/*
 sudo apt-get autoremove
