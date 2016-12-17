@@ -2,7 +2,7 @@
 ocpath='/var/www/owncloud'
 htuser='www-data'
 htgroup='www-data'
-rootuser='root'
+rootuser='pi'
 
 printf "Creating possible missing Directories\n"
 mkdir -p $ocpath/data
