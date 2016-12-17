@@ -18,10 +18,9 @@ rm owncloud-9.1.3.zip
 
 # moving files
 sudo mv owncloud/ /var/www/
-cp owncloud.conf /etc/apache2/sites-available/owncloud.conf
+sudo cp owncloud.conf /etc/apache2/sites-available/owncloud.conf
 
 # setting up owncloud server
-ln -s /etc/apache2/sites-available/owncloud.conf /etc/apache2/sites-enabled/owncloud.conf
 sudo chown www-data:www-data -R /var/www/owncloud/
 sudo chmod 770 -R /var/www/owncloud/
 
@@ -33,17 +32,17 @@ sudo a2enmod mime
 
 # setting mysql database
 # ask for user and password for editing local-settings.py
-echo "Please type your mysql password for root user"
-echo "something like Mys3cr3t"
-echo "======================="
-read -p " type here " MYSQL
+#echo "Please type your mysql password for root user"
+#echo "something like Mys3cr3t"
+#echo "======================="
+#read -p " type here " MYSQL
 
 # create user and database for graphite
-mysql -u root -p$MYSQL << EOF
-create database owncloud;
-create user 'owncloud'@'localhost' identified by 'owncloud_password';
-grant all on owncloud.* to 'owncloud';
-EOF
+#mysql -u root -p$MYSQL << EOF
+#create database owncloud;
+#create user 'owncloud'@'localhost' identified by 'owncloud_password';
+#grant all on owncloud.* to 'owncloud';
+#EOF
 
 # starting owncloud
 sudo a2ensite owncloud
