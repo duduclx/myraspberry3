@@ -30,20 +30,6 @@ sudo a2enmod env
 sudo a2enmod dir
 sudo a2enmod mime
 
-# setting mysql database
-# ask for user and password for editing local-settings.py
-#echo "Please type your mysql password for root user"
-#echo "something like Mys3cr3t"
-#echo "======================="
-#read -p " type here " MYSQL
-
-# create user and database for graphite
-#mysql -u root -p$MYSQL << EOF
-#create database owncloud;
-#create user 'owncloud'@'localhost' identified by 'owncloud_password';
-#grant all on owncloud.* to 'owncloud';
-#EOF
-
 # starting owncloud
 sudo a2ensite owncloud
 sudo service apache2 restart
@@ -52,6 +38,3 @@ sudo service apache2 restart
 echo "well done !"
 echo "go to http://localhost/owncloud"
 echo "and start your cloud!"
-
-#chmod u+x oc_perms.sh
-#sudo ./oc_perms.sh
