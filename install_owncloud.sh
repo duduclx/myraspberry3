@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install all from repo
-sudo apt-get update & upgrade
+sudo apt-get update
 
 ## manual installation
 # install mysql
