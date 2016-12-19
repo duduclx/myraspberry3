@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# see
+#oraclejava8.txt
+#or make it as a script and run it
+
 wget http://subsonic.org/download/subsonic-6.0.deb
 sudo dpkg -i subsonic-6.O.deb
 
@@ -18,3 +22,16 @@ echo "127.0.0.1 localhost"
 echo "to"
 echo "127.0.0.1 localhost subsonic.org"
 echo "cheers"
+
+
+## add jukebox player mode
+aplay -L
+# or
+cat /proc/asound/cards
+# then edit the subsonic start script:
+sudo nano /usr/bin/subsonic
+# add this just before  the -verbose:gc \
+'-Djavax.sound.sampled.SourceDataLine=#PCH [plughw:1,0]' \
+
+# then restart subsonic and wait one minute
+sudo service subsonic restart
