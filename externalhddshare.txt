@@ -1,0 +1,47 @@
+## connect your hdd and format it in ext4
+## with gparted
+sudo apt-get install gparted
+
+## annunce raspberry via bonjour
+sudo apt-get install avahi-daemon libavahi-client-dev
+
+## get hdd location (dev/sdx)
+sudo fdisk -l
+sudo mkdir /mnt/data
+sudo mount /dev/sda1 /mnt/data 
+
+sudo nano /etc/fstab
+## add your drive
+/dev/sda1      /mnt/data    ext4      defaults      0      0
+## save
+
+## be owner of the media
+sudo chown pi:root /mnt/data
+
+## share it with samba
+sudo apt-get install samba
+
+sudo nano /etc/samba/smb.conf
+
+## set following value as:
+read only = no
+create mask = 0777
+directory mask = 0777
+## add your folder
+[data]
+comment = data
+path = /mnt/data
+hide files = /lost+found/
+read only = no
+writable = yes
+guest ok = no
+guest only = no
+create mode = 0777
+directory mode = 0777
+share modes = yes
+## save
+
+sudo smbpasswd -a root
+sudo smbpasswd -a pi
+
+sudo service smbd restart
